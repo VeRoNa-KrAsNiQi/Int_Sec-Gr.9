@@ -36,3 +36,17 @@ def submitclicked():
     textbox1.configure(state="normal")
     if validimi():
         skano()
+def validimi():
+     if not ((textbox1.get().startswith("http://") or textbox1.get().startswith("https://"))):
+        validateLabel=Label(window,text="URL should start with http:// or https://",fg="indigo",bg="powderblue")
+        validateLabel.pack(padx=5,pady=5)
+        return False
+     return True
+button1=Button(window,command=submitclicked,text="Scan",fg='indigo',bg='powderblue',font=("arial",12,"bold"))
+button1.pack(padx=5,pady=10)
+button2=Button(window,command=clearclicked,text="Clear",fg='indigo',bg='powderblue',font=("arial",12,"bold"))
+button2.pack(padx=5,pady=5)
+validateLabel = Label(window, text="", font=("arial",12))
+validateLabel.pack(padx=80, pady=5)
+
+window.mainloop()
