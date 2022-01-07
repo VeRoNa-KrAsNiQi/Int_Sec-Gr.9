@@ -22,3 +22,17 @@ def skano():
     payloads=open("payloads.txt","r")
     for payload in payloads.readlines():
         target_with_payload = textbox1.get()+str(payload)
+testing = requests.get(url=target_with_payload, headers=header)
+    if str(payload) in str(testing.text):
+        label4=Label(window,text="Possible XSS Found!",font=("arial",10),fg="indigo",bg="powderblue")
+        label4.pack(padx=2,pady=2)
+    else:
+        label5=Label(window,text="Webpage is safe!",font=("arial",10),fg="indigo",bg="powderblue")
+        label5.pack(padx=2,pady=0)
+def clearclicked():
+    textbox1.delete(0,END)
+    textbox1.configure(state="normal")
+def submitclicked():
+    textbox1.configure(state="normal")
+    if validimi():
+        skano()
