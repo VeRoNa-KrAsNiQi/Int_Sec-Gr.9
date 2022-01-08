@@ -1,23 +1,29 @@
+#importimi i librarive te perdorura
 from tkinter import *
 import requests
-from PIL import ImageTk,Image
+from PIL import ImageTk,Image 
+
+#krijimi i dritares XSS-SCANNER
 window=Tk()
 window.geometry("500x500")
-window.minsize(500,500)
-window.maxsize(500,500)
+window.minsize(500,500) #madhesia minimale e dritares
+window.maxsize(500,500) #madhesia maksimale e dritares
 load=Image.open("images\\a.png")
 render=ImageTk.PhotoImage(load)
 img=Label(window,image=render)
 img.place(x=0,y=0)
-window.title("XSS-SCANNER")
+window.title("XSS-SCANNER") #titulli i dritares
 data=StringVar()
+#krijimi i label-ve dhe dizajnimi i tyre
 label1 = Label(window,text="XSS-SCANNER",fg='indigo',bg='powderblue',font=("arial",12,"bold"))
 label1.pack(fill=BOTH,pady=20,padx=20)
 label2 = Label(window,text="Enter the URL you want to scan:",font=("arial",10),fg="indigo",bg="powderblue")
 label2.pack(padx=5,pady=10)
 textbox1=Entry(window,font=("arial",12))
 textbox1.pack()
-def skano():
+
+
+def scan():
     header=""
     payloads=open("payloads.txt","r")
     for payload in payloads.readlines():
@@ -34,9 +40,9 @@ def clearclicked():
     textbox1.configure(state="normal")
 def submitclicked():
     textbox1.configure(state="normal")
-    if validimi():
-        skano()
-def validimi():
+    if validate():
+        scan()
+def validate():
      if not ((textbox1.get().startswith("http://") or textbox1.get().startswith("https://"))):
         validateLabel=Label(window,text="URL should start with http:// or https://",fg="indigo",bg="powderblue")
         validateLabel.pack(padx=5,pady=5)
