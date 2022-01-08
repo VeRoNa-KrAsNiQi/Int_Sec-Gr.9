@@ -30,11 +30,13 @@ Rreziku kryesor i ketij sulmi eshte qe sulmuesi mundet te kete casje edhe ne sou
 
 XSS Scanner është aplikacion i ndërtuar për detektimin e Cross-Site Skripatve që mund të ekzistojnë në ndonjë web applikacion, URL-ja e të cilit shënohet në textbox. Ky aplikacion u ndërtua mbi gjuhën progamuese Python dhe është përdorur textfile Payloads i cili përmban skriptat e mundshme malicioze. 
 Graphical User Interface (GUI) i applikacionit XSS Scanner
+
 ![271197196_327868739342036_1124851856919966101_n](https://user-images.githubusercontent.com/75573960/148659642-64ec066a-7a08-422b-946e-a98c5163722d.png)
 
 
 
 Pamje e aplikacionit në rastet kur kemi një URL jo reale apo kur shtyp butonin "Scan" përderisa textbox-i është i zbrazët.
+
 ![271219227_5000910409930624_2894316500571681692_n](https://user-images.githubusercontent.com/75573960/148659665-56726a6b-c125-48c8-ad0f-3cdff740191b.png)
 
 
@@ -42,12 +44,14 @@ Pamje e aplikacionit në rastet kur kemi një URL jo reale apo kur shtyp butonin
 
 Pamje e aplikacionit kur në textbox shkruhet një URL reale e cila është e sigurtë dhe nuk përmban
 ndonjë skriptë malicioze. 
+
 ![271492490_2920538284925726_6135089769111100551_n](https://user-images.githubusercontent.com/75573960/148659684-f6ef0478-fcb1-4d8c-9d24-62f93df4588c.png)
 
 
 
 
 Pamje e aplikacionit në rastet kur website-i që korrespondon me URL-në e dhënë përmban skripta malicioze.
+
 ![271518349_1092490984624682_4608459445773184234_n](https://user-images.githubusercontent.com/75573960/148659693-6258b13e-26fd-4417-a567-8023d4b634b5.png)
 
 
